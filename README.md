@@ -37,8 +37,8 @@ The bundle ships as a SwiftPM binary target (`CFFmpegOpus.artifactbundle`) with 
    ```
 2. Zip the bundle and compute the checksum:
    ```bash
-  (cd Artifacts && rm -f CFFmpegOpus.artifactbundle.zip && \
-       zip -r CFFmpegOpus.artifactbundle.zip CFFmpegOpus.artifactbundle)
+   (cd Artifacts && rm -f CFFmpegOpus.artifactbundle.zip && \
+        zip -r CFFmpegOpus.artifactbundle.zip CFFmpegOpus.artifactbundle)
    swift package compute-checksum Artifacts/CFFmpegOpus.artifactbundle.zip
    ```
 3. Commit the updated `Artifacts/` directory.
