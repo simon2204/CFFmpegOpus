@@ -61,7 +61,7 @@ let package = Package(
         .binaryTarget(
             name: "CFFmpegOpus",
             url: "https://github.com/simon2204/CFFmpegOpus/releases/download/v0.1.0/CFFmpegOpus.artifactbundle.zip",
-            checksum: "<INSERT_CHECKSUM>"
+            checksum: "d3ff2ee140698c0de808b14aabbfe553751eff244add635e71cf0906c6584ca4"
         ),
         .executableTarget(
             name: "ExampleApp",
