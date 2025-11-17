@@ -1,0 +1,4 @@
+module CFFmpegOpus [system] {
+    header "CFFmpegOpus.h"
+    export *
+}

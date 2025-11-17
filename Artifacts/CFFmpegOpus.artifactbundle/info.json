@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "artifacts": {
+    "CFFmpegOpus": {
+      "type": "staticLibrary",
+      "version": "0.1.0",
+      "variants": [
+        {
+          "path": "lib/libCFFmpegOpus.a",
+          "supportedTriples": [
+            "arm64-apple-macosx"
+          ],
+          "staticLibraryMetadata": {
+            "headerPaths": [
+              "include"
+            ],
+            "moduleMapPath": "include/module.modulemap"
+          }
+        },
+        {
+          "path": "lib/x86_64-unknown-linux-gnu/libCFFmpegOpus.a",
+          "supportedTriples": [
+            "x86_64-unknown-linux-gnu"
+          ],
+          "staticLibraryMetadata": {
+            "headerPaths": [
+              "include"
+            ],
+            "moduleMapPath": "include/module.modulemap"
+          }
+        },
+        {
+          "path": "lib/aarch64-unknown-linux-gnu/libCFFmpegOpus.a",
+          "supportedTriples": [
+            "aarch64-unknown-linux-gnu"
+          ],
+          "staticLibraryMetadata": {
+            "headerPaths": [
+              "include"
+            ],
+            "moduleMapPath": "include/module.modulemap"
+          }
+        }
+      ]
+    }
+  }
+}
