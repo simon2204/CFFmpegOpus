@@ -46,7 +46,7 @@ The bundle ships as a SwiftPM binary target (`CFFmpegOpus.artifactbundle`) with 
 
 ## Consuming from another Package
 
-Add the Git dependency to your `Package.swift`, then reference the binary target:
+Reference the binary target directly in your `Package.swift`:
 
 ```swift
 // swift-tools-version: 6.2
@@ -57,20 +57,17 @@ let package = Package(
     platforms: [
         .macOS(.v14)
     ],
-    dependencies: [
-        .package(url: "git@github.com:simon2204/CFFmpegOpus.git", branch: "main")
-    ],
     targets: [
+        .binaryTarget(
+            name: "CFFmpegOpus",
+            url: "https://github.com/simon2204/CFFmpegOpus/releases/download/v0.1.0/CFFmpegOpus.artifactbundle.zip",
+            checksum: "<INSERT_CHECKSUM>"
+        ),
         .executableTarget(
             name: "ExampleApp",
             dependencies: [
                 .target(name: "CFFmpegOpus")
             ]
-        ),
-        .binaryTarget(
-            name: "CFFmpegOpus",
-            url: "https://github.com/simon2204/CFFmpegOpus/releases/download/v0.1.0/CFFmpegOpus.artifactbundle.zip",
-            checksum: "<INSERT_CHECKSUM>"
         )
     ]
 )
